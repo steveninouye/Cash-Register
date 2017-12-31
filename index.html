@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div id='main'>
+
+        <div id='calcHistory'></div>
+
+        <br>
+    
+        $<input type='text' id='display'>
+        
+        <br>
+        <br>
+        
+        <button id='balance'>BALANCE</button>
+        <button id='reports'>REPORTS</button>
+        <button id='deposit'>DEPOSIT</button>
+        <button id='withdraw'>WITHDRAW</button>
+        
+        <br>
+
+
+        <button id='divide' onclick='addCalcHistory(calc.divide)'>&divide;</button>
+        <button id='seven' onclick='displayValue(7)'>7</button>
+        <button id='eight' onclick='displayValue(8)'>8</button>
+        <button id='nine'onclick='displayValue(9)'>9</button>
+        <button id='clear'>C</button>
+        
+        <br>
+
+        <button id='multiply' onclick='addCalcHistory(calc.multiply)'>X</button>
+        <button id='four' onclick='displayValue(4)'>4</button>
+        <button id='five' onclick='displayValue(5)'>5</button>
+        <button id='six' onclick='displayValue(6)'>6</button>
+        <button id='subtract' onclick='addCalcHistory(calc.subtract)'>-</button>
+        
+        <br>
+
+        <button id='percent'>%</button>
+        <button id='one' onclick='displayValue(1)'>1</button>
+        <button id='two' onclick='displayValue(2)'>2</button>
+        <button id='three' onclick='displayValue(3)'>3</button>
+        <button id='add' onclick='addCalcHistory(calc.add)'>+</button><br>
+
+
+        <button id='tripleZero' onclick='displayValue("000")'>000</button>
+        <button id='zero' onclick='displayValue(0)'>0</button>
+        <button id='doubleZero' onclick='displayValue("00")'>00</button>
+        <button id='decimal' onclick='displayValue("&#46;")'>.</button>
+        
+        <br>
+
+        <button id='equals'>=</button>
+        
+    </div>
+
+
+
+
+    <script src="./js/calculator.js"></script>
+    <script src='./js/cash_register.js'></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</body>
+</html>
