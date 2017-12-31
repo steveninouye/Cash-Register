@@ -23,10 +23,37 @@ const displayValue = function(x){
     }
 }
 
-var calcHistory = [[],[]];
+var calcHistory = [[],[],[],[]];
+var index = 0;
 
 const addCalcHistory = function(x){
     calcHistory[0].push(Number(display.value));
     calcHistory[1].push(x);
-    console.log(calcHistory);
+    if(calc.add === x){
+        calcHistory[2].push('+');
+        calcHistory[3].push('+');
+    } else if (calc.subtract === x) {
+        calcHistory[2].push('-');
+        calcHistory[3].push('-');
+    } else if (calc.divide === x) {
+        calcHistory[2].push('&divide;');
+        calcHistory[3].push('/');
+    } else if (calc.multiply === x) {
+        calcHistory[2].push('X');
+        calcHistory[3].push('*');
+    }
+    document.getElementById('calcHistoryDisplay').innerHTML += ` ${calcHistory[0][index]} ${calcHistory[2][index]}`;
+    index++;
+    display.value=0;
+    newDisplayNeeded = true;
+}
+
+const equals = function(){
+    let cache = "";
+    for(var i = 0; i < calcHistory[0].length; i++){
+        cache += calcHistory[0][i] + calcHistory[3][i];
+    }
+    cache += display.value;
+    console.log(cache);
+    display.value = eval(cache);
 }
