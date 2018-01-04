@@ -12,6 +12,7 @@
     <div id='main'>
 
         <div id='calcHistoryDisplay'></div>
+        <div id='theTotal'></div>
 
         <br>
     
@@ -28,7 +29,7 @@
         <br>
 
 
-        <button id='divide' onclick='addCalcHistory(calc.divide)'>&divide;</button>
+        <button id='divide' onclick='addCalcHistory("/")'>&divide;</button>
         <button id='seven' onclick='displayValue(7)'>7</button>
         <button id='eight' onclick='displayValue(8)'>8</button>
         <button id='nine'onclick='displayValue(9)'>9</button>
@@ -36,11 +37,11 @@
         
         <br>
 
-        <button id='multiply' onclick='addCalcHistory(calc.multiply)'>X</button>
+        <button id='multiply' onclick='addCalcHistory("*")'>X</button>
         <button id='four' onclick='displayValue(4)'>4</button>
         <button id='five' onclick='displayValue(5)'>5</button>
         <button id='six' onclick='displayValue(6)'>6</button>
-        <button id='subtract' onclick='addCalcHistory(calc.subtract)'>-</button>
+        <button id='subtract' onclick='addCalcHistory("-")'>-</button>
         
         <br>
 
@@ -48,7 +49,7 @@
         <button id='one' onclick='displayValue(1)'>1</button>
         <button id='two' onclick='displayValue(2)'>2</button>
         <button id='three' onclick='displayValue(3)'>3</button>
-        <button id='add' onclick='addCalcHistory(calc.add)'>+</button><br>
+        <button id='add' onclick='addCalcHistory("+")'>+</button><br>
 
 
         <button id='tripleZero' onclick='displayValue("000")'>000</button>
@@ -65,7 +66,7 @@
 
 
 
-    <script src="./js/calculator.js"></script>
+    <!-- <script src="./js/calculator.js"></script> -->
     <script src='./js/cash_register.js'></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -1,6 +1,10 @@
 function calculatorModule (){
-    var _total = 0;
-    var _memory = 0;
+    var _total = {
+        num: 0;
+        equation: "";
+        
+    }
+    var _memory = [];
 
     function load(x){
         validate(x);
