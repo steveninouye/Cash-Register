@@ -1,12 +1,14 @@
 var newDisplayNeeded = true;
-var decimalInput = false
+var decimalInput = false;
 
 var _total = {
     num: [],
     algorithm: [],
     total: "",
     memory: false
-}
+};
+
+var _memory = [];
 
 const displayValue = function(x){
     if(newDisplayNeeded && x === '00' | x === '000') {
@@ -39,9 +41,18 @@ const addCalcHistory = function(x){
     document.getElementById('display').value = 0;
     newDisplayNeeded = true;
     decimalInput = false;
+    if(x === "="){
+        _memory.push(_total);
+        _total = {
+            num: [],
+            algorithm: [],
+            total: "",
+            memory: false
+        };
+    }
 }
 
-function getTotal(){
+function getTotal(equals){
     //resets total
     _total.total = "";
     //loops through all indexes of numbers and algorigthms except for last index

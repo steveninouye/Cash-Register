@@ -29,7 +29,7 @@
         <br>
 
 
-        <button id='divide' onclick='addCalcHistory("/")'>&divide;</button>
+        <button id='divide' onclick='addCalcHistory("/", false)'>&divide;</button>
         <button id='seven' onclick='displayValue(7)'>7</button>
         <button id='eight' onclick='displayValue(8)'>8</button>
         <button id='nine'onclick='displayValue(9)'>9</button>
@@ -37,11 +37,11 @@
         
         <br>
 
-        <button id='multiply' onclick='addCalcHistory("*")'>X</button>
+        <button id='multiply' onclick='addCalcHistory("*", false)'>X</button>
         <button id='four' onclick='displayValue(4)'>4</button>
         <button id='five' onclick='displayValue(5)'>5</button>
         <button id='six' onclick='displayValue(6)'>6</button>
-        <button id='subtract' onclick='addCalcHistory("-")'>-</button>
+        <button id='subtract' onclick='addCalcHistory("-", false)'>-</button>
         
         <br>
 
@@ -49,7 +49,7 @@
         <button id='one' onclick='displayValue(1)'>1</button>
         <button id='two' onclick='displayValue(2)'>2</button>
         <button id='three' onclick='displayValue(3)'>3</button>
-        <button id='add' onclick='addCalcHistory("+")'>+</button><br>
+        <button id='add' onclick='addCalcHistory("+", false)'>+</button><br>
 
 
         <button id='tripleZero' onclick='displayValue("000")'>000</button>
@@ -59,7 +59,7 @@
         
         <br>
 
-        <button id='equal' onclick="equals()">=</button>
+        <button id='equal' onclick='addCalcHistory("=")'>=</button>
         
     </div>
 
