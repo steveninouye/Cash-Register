@@ -62,4 +62,23 @@ function getTotal(equals){
     //adds last index of num to total
     _total.total += `${_total.num[_total.num.length - 1]}`;
     document.getElementById('theTotal').innerHTML = eval(_total.total);
+};
+
+function adjustBalance(x){
+    if(_total.num.length === 0){
+        if(document.getElementById('display').value !== "0"){
+             _memory.push(
+                {
+                    total: document.getElementById('display').value,
+                    memory: x
+                }
+            )
+        } else if (document.getElementById('theTotal').innerText !== "" ){
+            _memory[_memory.length - 1 ].memory = x;
+        } else {
+            console.log("you didn't withdraw or deposit anything");
+        }
+    } else {
+        throw Error('Finish Your transaction!!!')
+    }
 }
