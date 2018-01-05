@@ -1,0 +1,38 @@
+#container {
+    display: flex;
+}
+
+#calcHistoryDisplay {
+    text-align: right;
+}
+
+#theTotal {
+    text-align: right;
+}
+
+#main {
+    background: lightgray;
+}
+
+#history {
+    text-align: right;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.green {
+    font-weight: bold;
+    font-size: 22px;
+    color: green;
+}
+
+.red {
+    font-weight: bold;
+    font-size: 22px;
+    color: red;
+}
+
+.theBigOne {
+    font-weight: bold;
+    font-size: 30px;
+}
