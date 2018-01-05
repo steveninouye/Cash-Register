@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 </head>
 <body>
-    
+    <div id='container'>
     <div id='main'>
 
         <div id='calcHistoryDisplay'></div>
@@ -21,9 +21,8 @@
         <br>
         <br>
         
-        <button id='balance'>BALANCE</button>
-        <button id='reports'>REPORTS</button>
-        <button id='deposit'>DEPOSIT</button>
+        <button id='balance' onclick="getBalance()">BALANCE</button>
+        <button id='deposit' onclick='adjustBalance("+")'>DEPOSIT</button>
         <button id='withdraw' onclick='adjustBalance("-")'>WITHDRAW</button>
         
         <br>
@@ -45,7 +44,6 @@
         
         <br>
 
-        <button id='percent'>%</button>
         <button id='one' onclick='displayValue(1)'>1</button>
         <button id='two' onclick='displayValue(2)'>2</button>
         <button id='three' onclick='displayValue(3)'>3</button>
@@ -61,6 +59,10 @@
 
         <button id='equal' onclick='addCalcHistory("=")'>=</button>
         
+    </div>
+    <div id='history'>
+
+    </div>
     </div>
 
 
